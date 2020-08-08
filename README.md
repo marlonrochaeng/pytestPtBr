@@ -83,11 +83,3 @@ This is an h2 heading
 
 This is an h2 heading
 
-## Heading
-
-This is an h1 heading
-
-### Sub-heading
-
-This is an h2 heading
-
