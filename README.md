@@ -41,7 +41,12 @@
 
 ## Instalação e primeiros passos
 
-This is an h1 heading
+> Execute o comando abaixo no seu terminal:
+pip install -U pytest
+
+> Verifique se esta versão foi instalada corretamente:
+pytest --version
+pytest 6.0.1
 
 ### Instalar pytest
 
