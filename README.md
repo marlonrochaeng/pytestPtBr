@@ -40,6 +40,16 @@
 
 
 ## Instalação e primeiros passos
+
+Versões: Python 3.5, 3.6, 3.7, 3.8, 3.9, PyPy3
+Plataformas: Linux and Windows
+Nome do pacote PyPI: pytest
+Documentatação como PDF: download latest
+pytest é um framework que torna a criação de testes simples e escaláveis fácil. Testes são expressivos e legíveis - não é necessário uso de código boilerplate. Dê início em minutos com um pequeno teste unitário ou testes funcionais complexos para sua aplicação.
+
+
+### Instalar pytest
+
 Execute o comando abaixo no seu terminal:
 > pip install -U pytest
 
@@ -47,10 +57,6 @@ Verifique se esta versão foi instalada corretamente:
 > pytest --version
 
 > pytest 6.0.1
-
-### Instalar pytest
-
-This is an h2 heading
 
 
 ### Criando o primeiro teste
