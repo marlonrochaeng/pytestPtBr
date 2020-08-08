@@ -106,7 +106,29 @@ geralmente, segue as regras de descoberta de teste padrão.
 
 ### Verificando que uma determinada exceção é levantada
 
-This is an h2 heading
+Utilize o _raise_ helper para verificar que determinado código levanta uma exceção:
+
+```python
+# content of test_sysexit.py
+import pytest
+
+def f():
+  raise SystemExit(1)
+
+def test_mytest():
+  with pytest.raises(SystemExit):
+    f()
+```
+
+Execute o teste com o modo de relatório _quiet_:
+```
+$ pytest -q test_sysexit.py
+. [100%]
+1 passed in 0.12s
+```
+
+**Nota:** O parâmetro -q/--quiet mantém a saída sucinta neste e nos próximos testes.
+
 
 ### Agrupando vários testes em uma classe
 
