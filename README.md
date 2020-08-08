@@ -1,4 +1,10 @@
+# Pytest pt_br
 
+> Baseado no documento oficial https://buildmedia.readthedocs.org/media/pdf/pytest/latest/pytest.pdf
+
+> A intenção dessa "tradução" é, além de estudar, prover material para quem queira buscar o pytest em português do Brasil.
+
+<!-- toc -->
 
 - [Instalação e primeiros passos](#heading)
   * [Instalar pytest](#sub-heading)
@@ -13,14 +19,6 @@
   * [Sub-heading](#sub-heading-1)
 
 
-
-# Teste
-
-> Baseado no documento oficial https://buildmedia.readthedocs.org/media/pdf/pytest/latest/pytest.pdf
-
-> A intenção dessa "tradução" é, além de estudar, prover material para quem queira buscar o pytest em português do Brasil.
-
-<!-- toc -->
 
 ## Instalação e primeiros passos
 
