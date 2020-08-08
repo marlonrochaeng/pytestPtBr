@@ -61,7 +61,16 @@ Verifique se esta versão foi instalada corretamente:
 
 ### Criando o primeiro teste
 
-This is an h2 heading
+Crie uma função de teste simples com apenas 4 linhas de código:
+
+```python
+# content of test_sample.py
+def func(x):
+  return x + 1
+  
+def test_answer():
+  assert func(3) == 5
+```
 
 ### Executando vários testes
 
