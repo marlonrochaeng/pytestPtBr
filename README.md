@@ -245,6 +245,11 @@ Veja que tipo de fixtures internas o pytest disponibiliza com o comando:
 
 **Nota:** O comando omite fixtures que começam com ```__``` a menos que a opção **-v** seja utilizada.
 ### Continue lendo
-
-This is an h2 heading
+Veja recursos adicionais do pytest que podem ajudálo a customizar seus testes:
+• “Invocando pytest através do comando python -m pytest” 
+• “Usando pytest em uma suíte de teste existente”
+• “Marcando funções de testes com atributos” para uso do pytest.mark
+• “pytest fixtures: explícito, modular, escalável”
+• “Escrevendo plugins”
+• “Boas práticas de integração” para virtualenv e test layouts
 
