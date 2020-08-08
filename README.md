@@ -86,15 +86,23 @@ _______________________________ test_answer ________________________________
 def test_answer():
    assert func(3) == 5
  E assert 4 == 5
-   >E + where 4 = func(3)
+>E + where 4 = func(3)
 test_sample.py:6: AssertionError
 ========================= short test summary info ==========================
 FAILED test_sample.py::test_answer - assert 4 == 5
 ============================ 1 failed in 0.12s =============================
 ```
-### Executando vários testes
+O 100% refere-se ao progresso total dos testes executados. Quando termina, o pytest, então, exibe um relatório de erro devido à func(3) não retornar 5.
 
-This is an h2 heading
+**Nota:** Você pode usar a declaração de assert para verificar expectativas no teste. A asserção avançada do pytest vai reportar valores intermediários para
+que você possa evitar os muitos nomes dos métodos do JUnit legado.
+
+
+### Executando vários testes
+```
+pytest vai executar todos os arquivos da forma test_*.py ou *_test.py no diretório atual em seus subdiretórios. Mas
+geralmente, segue as regras de descoberta de teste padrão.
+```
 
 ### Verificando que uma determinada exceção é levantada
 
