@@ -53,7 +53,7 @@ pytest é um framework que torna a criação de testes simples e escaláveis fá
 Execute o comando abaixo no seu terminal:
 > pip install -U pytest
 
-Verifique se esta versão foi instalada corretamente:
+Verifique se a versão foi instalada corretamente:
 > pytest --version
 
 > pytest 6.0.1
@@ -71,6 +71,25 @@ def func(x):
 def test_answer():
   assert func(3) == 5
 ```
+
+É isso, agora você pode executar esse teste:
+> pytest
+> =========================== test session starts ============================
+> platform linux -- Python 3.x.y, pytest-6.x.y, py-1.x.y, pluggy-0.x.y
+> cachedir: $PYTHON_PREFIX/.pytest_cache
+> rootdir: $REGENDOC_TMPDIR
+> collected 1 item
+> test_sample.py F [100%]
+> ================================= FAILURES =================================
+> _______________________________ test_answer ________________________________
+> def test_answer():
+> assert func(3) == 5
+> E assert 4 == 5
+> E + where 4 = func(3)
+> test_sample.py:6: AssertionError
+> ========================= short test summary info ==========================
+> FAILED test_sample.py::test_answer - assert 4 == 5
+> ============================ 1 failed in 0.12s =============================
 
 ### Executando vários testes
 
