@@ -1,4 +1,4 @@
-###Baseado no documento oficial https://buildmedia.readthedocs.org/media/pdf/pytest/latest/pytest.pdf
+
 
 - [Instalação e primeiros passos](#heading)
   * [Instalar pytest](#sub-heading)
@@ -16,7 +16,9 @@
 
 # Teste
 
-> This is a fixture to test heading levels
+> Baseado no documento oficial https://buildmedia.readthedocs.org/media/pdf/pytest/latest/pytest.pdf
+
+> A intenção dessa "tradução" é, além de estudar, prover material para quem queira buscar o pytest em português do Brasil.
 
 <!-- toc -->
 
