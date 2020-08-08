@@ -6,7 +6,7 @@
 
 <!-- toc -->
 
-- [Instalação e primeiros passos]
+- [Instalação e primeiros passos](#heading)
   * [Instalar pytest](#sub-heading)
   * [Criando o primeiro teste](#sub-heading)
   * [Executando vários testes](#sub-heading)
