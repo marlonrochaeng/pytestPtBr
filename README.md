@@ -15,8 +15,27 @@
   * [Solicitando um diretório temporário exclusivo para testes funcionais](#sub-heading)
   * [Continue lendo](#sub-heading)
   
-- [Heading](#heading-1)
-  * [Sub-heading](#sub-heading-1)
+- [Usage and Invocations](#heading-1)
+  * [Invocando pytest através de python -m pytest](#sub-heading-1)
+  * [Códigos de saída possíveis](#sub-heading-1)
+  * [Obtendo ajuda em versão, nomes de opções, variáveis de ambiente](#sub-heading-1)
+  * [Parando após a primeira (ou N) falhas](#sub-heading-1)
+  * [Especificando/selecionando testes](#sub-heading-1)
+  * [Modificando o Python traceback printing](#sub-heading-1)
+  * [Summary report detalhado](#sub-heading-1)
+  * [Executando no PDB (Python Debugger) em falhas](#sub-heading-1)
+  * [Executando no PDB (Python Debugger) no início de um teste](#sub-heading-1)
+  * [Colocando Breakpoints](#sub-heading-1)
+  * [Usando a função de breakpoint interna](#sub-heading-1)
+  * [Capturando a duração de testes](#sub-heading-1)
+  * [Manipulador de falhas](#sub-heading-1)
+  * [Criando arquivos nos formatos JUnitXML](#sub-heading-1)
+  * [Criando arquivos nos formatos resultlog](#sub-heading-1)
+  * [Enviando relatórios de testes para serviços pastebin online](#sub-heading-1)
+  * [Plugins de carregamento antecipado](#sub-heading-1)
+  * [Desabilitando plugins](#sub-heading-1)
+  * [Executando pytest atráves de código Python](#sub-heading-1)
+
 
 
 
