@@ -210,8 +210,40 @@ FAILED test_class_demo.py::TestClassDemoInstance::test_two - assert 0
 
 ### Solicitando um diretório temporário exclusivo para testes funcionais
 
-This is an h2 heading
+O pytest nos dá acesso à builtin fixtures/functions para solicitar recursos diversos, como, por exemplo, diretório temporário:
+```python
+# content of test_tmpdir.py
+def test_needsfiles(tmpdir):
+  print(tmpdir)
+  assert 0
+```
 
+Adicione o nome tmpdir na assinatura da função de teste e o pytest irá procurá-lo e chamar uma fixture factory para criar o recurso antes da chamada da função de teste.
+Antes dessa execução, o pytest cria um diretório temporário único-por-teste:
+
+```
+$ pytest -q test_tmpdir.py
+F [100%]
+================================= FAILURES =================================
+_____________________________ test_needsfiles ______________________________
+tmpdir = local('PYTEST_TMPDIR/test_needsfiles0')
+  def test_needsfiles(tmpdir):
+    print(tmpdir)
+>   assert 0
+E   assert 0
+test_tmpdir.py:3: AssertionError
+--------------------------- Captured stdout call ---------------------------
+PYTEST_TMPDIR/test_needsfiles0
+========================= short test summary info ==========================
+FAILED test_tmpdir.py::test_needsfiles - assert 0
+1 failed in 0.12s
+```
+Mais informações sobre como usar tmpdir estão disponíveis na sessão de **diretórios temporários e arquivos**.
+Veja que tipo de fixtures internas o pytest disponibiliza com o comando:
+
+> pytest --fixtures # shows builtin and custom fixtures
+
+**Nota:** O comando omite fixtures que começam com ```__``` a menos que a opção **-v** seja utilizada.
 ### Continue lendo
 
 This is an h2 heading
