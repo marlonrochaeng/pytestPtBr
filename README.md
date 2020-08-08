@@ -132,7 +132,81 @@ $ pytest -q test_sysexit.py
 
 ### Agrupando vários testes em uma classe
 
-This is an h2 heading
+Quando você desenvolve vários testes, existe a possibilidade de agrupá-los em uma classe. O pytest torna a atividade de criar uma classe contendo mais de um teste bem fácil.
+```python
+# content of test_class.py
+class TestClass:
+  def test_one(self):
+    x = "this"
+    assert "h" in x
+    
+  def test_two(self):
+    x = "hello"
+    assert hasattr(x, "check")
+```
+O pytest descobre os testes seguindo a Convenção do Python para descobrimento de testes, sendo assim, executa ambas as funções que começam com test_.
+Não é necessário uso de subclasse ou algo do gênero, mas, tenha certeza que o nome de sua classe deve começar com o nome Test, senão seus testes serão
+pulados. Podemos executar esse módulo apenas passando o nome do arquivo como parâmetro:
+
+```
+# content of test_class.py
+$ pytest -q test_class.py
+.F [100%]
+================================= FAILURES =================================
+____________________________ TestClass.test_two ____________________________
+self = <test_class.TestClass object at 0xdeadbeef>
+  def test_two(self):
+    x = "hello"
+>     assert hasattr(x, "check")
+E     AssertionError: assert False
+E     + where False = hasattr('hello', 'check')
+test_class.py:8: AssertionError
+========================= short test summary info ==========================
+FAILED test_class.py::TestClass::test_two - AssertionError: assert False
+1 failed, 1 passed in 0.12s
+```
+
+O primeiro teste passou e o segundo falhou. Você pode observar facilmente os valores intermediários na asserção para ajudá-lo a entender a razão da falha.
+Agrupar testes em classes pode ser benéfico pelas seguintes razões:
+• Organização do teste
+• Compartilhar fixtures específicas para testes naquela classe particular
+• Aplicando comportamentos à nível de classe e tendo-os aplicados implicitamente nos testes
+
+Algo a ficar atento é quando agrupamos testes em uma classe éque cada teste é uma instância única daquela classe. Com cada teste
+dividindo a mesma instância de classe seria prejudicial ao isolamento do teste e iria promover práticas ruins de testes. Isso é 
+exibido abaixo:
+```python
+# content of test_class_demo.py
+class TestClassDemoInstance:
+  def test_one(self):
+    assert 0
+  def test_two(self):
+    assert 0
+```
+
+```
+$ pytest -k TestClassDemoInstance -q
+FF [100%]
+================================= FAILURES =================================
+______________________ TestClassDemoInstance.test_one ______________________
+self = <test_class_demo.TestClassDemoInstance object at 0xdeadbeef>
+  def test_one(self):
+> assert 0
+E assert 0
+test_class_demo.py:3: AssertionError
+______________________ TestClassDemoInstance.test_two ______________________
+self = <test_class_demo.TestClassDemoInstance object at 0xdeadbeef>
+  def test_two(self):
+> assert 0
+E assert 0
+test_class_demo.py:6: AssertionError
+========================= short test summary info ==========================
+FAILED test_class_demo.py::TestClassDemoInstance::test_one - assert 0
+FAILED test_class_demo.py::TestClassDemoInstance::test_two - assert 0
+2 failed in 0.12s
+
+```
+
 
 ### Solicitando um diretório temporário exclusivo para testes funcionais
 
