@@ -7,13 +7,13 @@
 <!-- toc -->
 
 - [Instalação e primeiros passos](#instalação-e-primeiros-passos)
-  * [Instalar pytest](#sub-heading)
-  * [Criando o primeiro teste](#sub-heading)
-  * [Executando vários testes](#sub-heading)
-  * [Verificando que uma determinada exceção é levantada](#sub-heading)
-  * [Agrupando vários testes em uma classe](#sub-heading)
-  * [Solicitando um diretório temporário exclusivo para testes funcionais](#sub-heading)
-  * [Continue lendo](#sub-heading)
+  * [Instalar pytest](#instalar-pytest)
+  * [Criando o primeiro teste](#criando-o-primeiro-teste)
+  * [Executando vários testes](#executando-vários-testes)
+  * [Verificando que uma determinada exceção é levantada](#verificando-que-uma-determinada-exceção-é-levantada)
+  * [Agrupando vários testes em uma classe](#agrupando-vários-testes-em-uma-classe)
+  * [Solicitando um diretório temporário exclusivo para testes funcionais](#solicitando-um-diretório-temporário-exclusivo-para-testes-funcionais)
+  * [Continue lendo](#continue-lendo)
   
 - [Usage and Invocations](#heading-1)
   * [Invocando pytest através de python -m pytest](#sub-heading-1)
